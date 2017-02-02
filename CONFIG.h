@@ -6,8 +6,8 @@
  */ 
 
 
-#ifndef BRUSHLESS_H_
-#define BRUSHLESS_H_
+#ifndef CONFIG_H_
+#define CONFIG_H_
 #include <avr/interrupt.h>
 #include <avr/io.h>
 /**********************  PWM  ******************************************/
@@ -17,7 +17,7 @@
 
 /*******TRANZYSTOR_GORNY********************************************/
 
-#define U_H_SET    PORTD.DIRSET	=	PIN0_bm;
+#define U_H_SET     PORTD.DIRSET	=	PIN0_bm;
 #define U_H_LOW		PORTD.OUTCLR	=   PIN0_bm;
 #define U_H_ON		TCD0.CTRLB |= TC0_CCAEN_bm;
 #define U_H_OFF		TCD0.CTRLB &= ~TC0_CCAEN_bm;
@@ -25,7 +25,7 @@
 
 /******TRANZYSTOR_DOLNY*********************************************/
 
-#define U_L_SET  PORTD.DIRSET	=	PIN4_bm;
+#define U_L_SET     PORTD.DIRSET	=	PIN4_bm;
 #define U_L_LOW		PORTD.OUTCLR	=   PIN4_bm;
 #define U_L_ON		PORTD.OUTSET	=	PIN4_bm;
 #define U_L_OFF		PORTD.OUTCLR	=   PIN4_bm;
@@ -33,7 +33,7 @@
 
 /********************* FAZA V **************************************/
 /*******TRANZYSTOR_GORNY********************************************/
-#define V_H_SET    PORTD.DIRSET	=	PIN1_bm;
+#define V_H_SET     PORTD.DIRSET	=	PIN1_bm;
 #define V_H_LOW		PORTD.OUTCLR	=   PIN1_bm;
 #define V_H_ON		TCD0.CTRLB |= TC0_CCBEN_bm;
 #define V_H_OFF		TCD0.CTRLB &= ~TC0_CCBEN_bm;
@@ -41,7 +41,7 @@
 
 /******TRANZYSTOR_DOLNY*********************************************/
 
-#define V_L_SET    PORTD.DIRSET	=	PIN5_bm;
+#define V_L_SET     PORTD.DIRSET	=	PIN5_bm;
 #define V_L_LOW		PORTD.OUTCLR	=   PIN5_bm;
 #define V_L_ON		PORTD.OUTSET	=	PIN5_bm;
 #define V_L_OFF		PORTD.OUTCLR	=   PIN5_bm;
@@ -49,7 +49,7 @@
 
 /********************* FAZA W **************************************/
 /*******TRANZYSTOR_GORNY********************************************/
-#define W_H_SET    PORTD.DIRSET	=	PIN2_bm;
+#define W_H_SET     PORTD.DIRSET	=	PIN2_bm;
 #define W_H_LOW		PORTD.OUTCLR	=   PIN2_bm;
 #define W_H_ON		TCD0.CTRLB |= TC0_CCCEN_bm;
 #define W_H_OFF		TCD0.CTRLB &= ~TC0_CCCEN_bm;
@@ -57,7 +57,7 @@
 
 /******TRANZYSTOR_DOLNY*********************************************/
 
-#define W_L_SET    PORTD.DIRSET	=	PIN6_bm;
+#define W_L_SET     PORTD.DIRSET	=	PIN6_bm;
 #define W_L_LOW		PORTD.OUTCLR	=   PIN6_bm;
 #define W_L_ON		PORTD.OUTSET	=	PIN6_bm;
 #define W_L_OFF		PORTD.OUTCLR	=   PIN6_bm;
@@ -73,4 +73,4 @@
 
 
 void brushless_init(void);
-#endif /* BRUSHLESS_H_ */
+#endif /* CONFIG_H_ */

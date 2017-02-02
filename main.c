@@ -6,7 +6,7 @@
  */ 
 
 #include <avr/io.h>
-#include "brushless.h"
+#include "config.h"
 #include <util/delay.h>
 #include <avr/interrupt.h>
 

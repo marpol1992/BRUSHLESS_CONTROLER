@@ -4,7 +4,7 @@
  * Created: 05.01.2017 17:45:49
  *  Author: marek
  */ 
-#include "brushless.h"
+#include "config.h"
 #include <avr/interrupt.h>
 
 void brushless_init(void){
